@@ -1,0 +1,42 @@
+## 安装
+    官方网址：https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git
+
+## 初次安装配置
+* 在window的用户文件下有一个文件名字是 .gitconfig 的配置文件，里面记录了当前用户使用的配置
+
+* 配置用户名
+    git config --global user.name '用户名'
+* 配置邮箱
+    git config --global user.email '2495900371@qq.com'
+
+* 查看git全部命令文档（在网页中打开，无需网络）
+    git help config
+
+* 在终端中打开帮助文档
+    git cofig -h
+
+## 初始化项目和git仓库
+
+    如果自己有一个尚未进行版本控制的项目目录,想要用Git来控制它，需要执行如下两个步骤:
+        ①在项目目录中，通过鼠标右键打开“Git Bash" 
+        ②执行gitinit命令将当前的目录转化为Git仓库
+    git init命令会创建一个名为 .git 的隐藏目录,
+
+    这个.git目录就是当前项目的Git仓库,里面包含了初始的必要文件，这些文件是Git仓库的必要组成部分。
+
+## 基本状态
+    未跟踪(Untracked)   不被git所管理的文件
+    未修改(Unmodified)  工作区的文件和git仓库的文件内容一致
+    已修改(Modified)    工作区的文件和git仓库的文件内容不一致
+    已暂存(Staged)      工作区的被修改的文件放到暂存区，准备将修改后的文件保存到git仓库
+
+## 检查文件所处于什么状态
+    git status
+    git status -s 使用精简的方式展示 在未跟踪的文件前面显示两个红色问号 "??"
+
+## 跟踪文件，将文件添加到暂存区
+    git add 文件名或文件夹
+    此时如果再用git status -s查看文件状态，则在文件名字前面显示一个绿色的A 说明文件或文件夹已被跟踪，处于暂存状态
+
+## 提交文件更新
+    git commit -m '提交成功的文本'
