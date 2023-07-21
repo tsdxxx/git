@@ -111,5 +111,15 @@
     %ar    作者修订日期，按多久以前的方式显示
     %s     提交说明
 
+## 回退到指定的版本
+
+ * 在一行显示所有的提交历史
+    git log --pretty=oneline
+
+ * 返回指定id的版本
+    git reset --hard 哈希值id
+
+ * 返回旧版本后，查看最新版本
+    git reflog --pretty=oneline
 
 
