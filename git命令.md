@@ -122,3 +122,12 @@
 
  * 返回旧版本后，查看最新版本
     git reflog --pretty=oneline
+
+## 添加到github远程仓库
+
+连接远程仓库
+    git remote add origin 仓库地址
+
+推送到远程仓库
+    git push -u origin master
+    
