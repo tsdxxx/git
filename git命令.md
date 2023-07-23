@@ -173,3 +173,11 @@
 
  ## 将远程仓库的文件克隆到本地
   git clone 远程仓库的地址
+
+
+
+## 查看连接的远程仓库
+ git remote -v
+
+## 移除连接的仓库
+git remote remove origin
