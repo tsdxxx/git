@@ -128,6 +128,48 @@
 连接远程仓库
     git remote add origin 仓库地址
 
-推送到远程仓库
+第一次推送到远程仓库
     git push -u origin master
-    
+
+第二次后就可以不用使用上面代码
+    git push
+
+## SSH的创建
+
+    ①打开Git Bash
+
+    ②粘贴如下的命令,并将your_ _email@example.com替换为注册Github账号时填写的邮箱:
+●
+    ssh-keygen -t rsa -b 4096 -C "邮箱'
+
+    ③连续敲击3次回车，即可在C:\Users\用户名文件夹\.ssh目录中生成id_ rsa 和id_ rsa.pub 两个文件
+
+## 配置SSH
+
+    ①使用记事本打开id_ _rsa.pub 文件，复制里面的文本内容
+    ②在浏览器中登录Github,点击头像-> Settings -> SSH and GPG Keys -> New SSH key
+    ③将id_ _rsa.pub文件中的内容,粘贴到Key对应的文本框中
+    ④在Title文本框中任意填写一一个名称，来标识这个Key从何而来
+
+检测是否配置成功
+
+    ssh -T git@github.com
+    执行完后输入yes
+    成功则提示：Hi tsdxxx! You've successfully authenticated, but GitHub does not provide shell access.
+
+
+## 使用SSH提交到GitHub仓库中
+
+ 新建一个仓库
+ 在项目根目录文件中 打开git base
+
+链接远程仓库
+ git remote add origin git@github.com:tsdxxx/bishe.git 
+
+ git branch -M main
+
+ 推送到仓库
+ git push -u origin main
+
+ ## 将远程仓库的文件克隆到本地
+  git clone 远程仓库的地址
